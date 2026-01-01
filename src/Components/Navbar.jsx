@@ -1,0 +1,43 @@
+import React from 'react'
+import { Link, NavLink} from 'react-router'
+import { SiDailydotdev } from "react-icons/si";
+const navLinks = [
+  {
+    page:'home',
+    link:'/'
+  },
+  {
+    page:'shop',
+    link:'/shop'
+  },
+  {
+    page:'contact',
+    link:'/contact'
+  },
+  {
+    page:'about',
+    link:'/about'
+  }
+]
+const Navbar = () => {
+  const NavItems = ({item}) => {
+    return <NavLink to = {item?.link}>{item?.page}</NavLink>
+  }
+  return (
+    <div className='w-full h-20 flex items-center justify-between gap-10'>
+      <div>
+          <Link to = {"/login"} className='text-base flex items-center gap-2 font-medium'><SiDailydotdev />DailyCart</Link>
+      </div>
+
+      <nav className='flex gap-5'>
+        {
+          navLinks?.map(item =>(
+            <NavItems item={item} />
+          ))
+        }
+      </nav>
+    </div>
+  )
+}
+
+export default Navbar
