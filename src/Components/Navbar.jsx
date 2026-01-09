@@ -15,7 +15,7 @@ const navLinks = [
     link:'/contact'
   },
   {
-    page:'about',
+    page:'about us',
     link:'/about'
   }
 ]
@@ -24,7 +24,9 @@ const Navbar = () => {
     return <NavLink to = {item?.link}>{item?.page}</NavLink>
   }
   return (
-    <div className='w-full h-20 flex items-center justify-between gap-10 capitalize'>
+    <div className='w-full h-15 bg-blue-300'>
+      <div className='mx-auto px-4 pt-4 w-full flex items-center justify-around gap-10 capitalize'>
+     
       <div>
           <Link to = {"/login"} className='text-base flex items-center gap-2 font-medium'><SiDailydotdev />DailyCart</Link>
       </div>
@@ -38,10 +40,11 @@ const Navbar = () => {
       </nav>
 
       <div className='flex items-center gap-2'>
-        <Link to = {'/login'} className='text-base font-bold capitalize'>login</Link>
-        <span className='h-5 w-1 bg-[#5e9eed] inline-block rounded-2xl'></span>
-        <Link to = {'/register'} className='text-base font-bold capitalize'>signup</Link>
+        <Link to = {'/login'} className='text-base capitalize font-semibold'>login</Link>
+        <span className='h-5 w-0.5 bg-[#ff9d00] inline-block rounded-2xl'></span>
+        <Link to = {'/register'} className='text-base capitalize font-semibold'>signup</Link>
       </div>
+    </div>
     </div>
   )
 }
