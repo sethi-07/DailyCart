@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <NavLink
       to={item?.link}
-      className={`hover:text-blue-900 transition-colors ${className}`}
+      className={`hover:text-cyan-200 transition-colors ${className}`}
     >
       {item?.page}
     </NavLink>
@@ -73,7 +73,7 @@ const Navbar = () => {
         <NavItems
           key={item.page}
           item={item}
-          className="hover:text-blue-900"
+          className="hover:text-cyan-400"
         />
       ))}
     </nav>
